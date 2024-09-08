@@ -6,6 +6,8 @@ import LoginInPage from '../pages/LoginInPage'
 import Employe from '../pages/Employe'
 import Employes from '../pages/Employes'
 import Profile from '../pages/Profile'
+import Login from '../pages/Login'
+import LoginInPageEm from '../pages/LoginInPageEm'
 
 const rout = [
     {
@@ -26,7 +28,7 @@ const rout = [
     },
     {
         path: '/login',
-        component: <LoginInPage/>,
+        component: <Login/>,
         key: 'login'
     },
     {
@@ -43,6 +45,16 @@ const rout = [
         path: '/profile',
         component: <Profile/>,
         key: 'profile'
+    },
+    {
+        path: '/loginemployer',
+        component: <LoginInPage/>,
+        key: 'loginpageemployer'
+    },
+    {
+        path: '/loginemploye',
+        component: <LoginInPageEm/>,
+        key: 'loginpageem'
     }
 ]
 const AppRout = () => {

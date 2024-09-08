@@ -21,5 +21,14 @@ class Request {
             throw error;
         }
     }
+
+    async fetchProfile(endpoint, id) {
+        const response = await instanceAxios.get(`${endpoint}/${id}`)
+        return response.data
+    }
+    async fetchLoginEmploye(endpoint, email, password) {
+        const response = await instanceAxios.get(`${endpoint}/?password=${password}&email=${email}`)
+        return response.data
+    }
 }
 export default new Request();

@@ -5,7 +5,7 @@ import index from '../../api/index'
 const LoginEmp = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [endpoint] = useState('employes')
+    const [endpoint] = useState('employe')
     const [error, setError] = useState('')
 
     const fetchLog = async () => {

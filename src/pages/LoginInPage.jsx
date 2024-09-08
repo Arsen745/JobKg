@@ -7,7 +7,7 @@ const LoginInPage = () => {
     <div>
         <Header/>
         <Login/>
-
+        <h1>Жумуш беруучу</h1>
     </div>
   )
 }

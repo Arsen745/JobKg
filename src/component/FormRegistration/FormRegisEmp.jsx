@@ -38,7 +38,13 @@ const FormRegisEmp = () => {
         if (Object.keys(newErrors).length === 0) {
             console.log('Все поля заполнены корректно, отправляем данные');
             const response = await index.fetchNew(name, surname, age, email, password, endpoint)
-            console.log(response);
+            const data = {
+                id: response.id,
+                endpoint: endpoint
+            };
+            
+            localStorage.setItem('data', JSON.stringify(data));
+            window.location.pathname = '/profile'
         }
     };
 
@@ -47,7 +53,7 @@ const FormRegisEmp = () => {
             <form>
                 <div className='form-row'>
                     <div className='col'>
-                        <label>Имя<span>*</span></label>
+                        <label>Имaя<span>*</span></label>
                         <input
                             className={`form-control ${errors.name ? 'error' : ''}`}
                             type='text'
