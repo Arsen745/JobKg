@@ -71,7 +71,7 @@ const FormRegisEmp = () => {
                             placeholder='Фамилия...'
                             value={surname}
                             onChange={(e) => setSurname(e.target.value)}
-                        />
+                        />  
                         {errors.surname && <small className="error-message">{errors.surname}</small>}
                     </div>
                     <div className='col'>

@@ -4,6 +4,8 @@
     margin: auto;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    position: relative;
     .card-pro{
         display: flex;
         align-items: center;
@@ -27,5 +29,9 @@
                 }
             }
         }
+    }
+    .edit {
+        position: absolute;
+        bottom: 0;
     }
 }
