@@ -3,6 +3,7 @@ import Header from '../UI/header/Header'
 import index from '../api/index'
 import CardProile from '../component/cardprofile/CardProile'
 import Cart from '../component/cart/Cart'
+import Registration from '../rule/employ/Registration'
 
 const Profile = () => {
     const [data, setData] = useState(null)
@@ -52,6 +53,9 @@ const Profile = () => {
             </div>
             <div>
                 <CardProile name={data.name} surname={data.surname} email={data.email} age={data.age}/>
+            </div>
+            <div>
+                <Registration/>
             </div>
         </div>
     )
