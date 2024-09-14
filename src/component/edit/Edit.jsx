@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Edit.css'
 
 const Edit = (props) => {
-    const { name, surname, email, onChangeName, onChangeSurname, onChangeEmail } = props;
+    const { name, surname, email, onChangeName, onChangeSurname, onChangeEmail, onSave } = props;
     const [namer, setNamer] = useState('')
     const [surnamer, setSurNamer] = useState('')
     const [emailer, setEmailer] = useState('')
@@ -28,6 +28,10 @@ const Edit = (props) => {
 
         } else {
             setEmailer('')
+        }
+
+        if (onSave) {
+            onSave(name, surname, email); // Вызываем функцию сохранения из CardProfile
         }
     }
     return (

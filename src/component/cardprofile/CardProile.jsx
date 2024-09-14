@@ -15,6 +15,17 @@ const CardProfile = (props) => {
   function toggleModal() {
     setModal(!modal);
   }
+
+
+
+  const saveChanges = (newName, newSurname, newEmail) => {
+    setName(newName);
+    setSurname(newSurname);
+    setEmail(newEmail);
+    setModal(false); // Закрыть модальное окно после сохранения
+  }
+
+
   const { name, surname, email, age } = props;
   return (
     <div className='card-profile'>
@@ -39,6 +50,7 @@ const CardProfile = (props) => {
             onChangeName={(e) => setName(e.target.value)}
             onChangeSurname={(e) => setSurname(e.target.value)}
             onChangeEmail={(e) => setEmail(e.target.value)}
+            onSave={saveChanges} // Передача функции сохранения
           />
         )}
       </div>
